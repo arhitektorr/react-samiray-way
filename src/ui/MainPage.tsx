@@ -11,7 +11,6 @@ export const MainPage = () => {
   return (
     <div>
       <div style={{ display: 'flex', gap: '50px' }}>
-        <h1>Mudicfun Player</h1>
         <TrackLists
           selectedTrackId={trackId}
           onTrackSelect={handleTrackSelect}
