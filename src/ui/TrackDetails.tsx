@@ -1,5 +1,5 @@
 import { useTrackDetail } from '../bll/useTrackDetail';
-import styles from './TrackDetails.module.css';
+import styles from './trackDetails.module.css';
 type Props = {
   trackId: string | null;
 };
