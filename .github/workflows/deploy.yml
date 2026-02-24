@@ -4,6 +4,11 @@ on: # Проверяет на какое событие
   push: # push событие
     branches: [main] #Каккя ветка
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs: # Шаги выполнения
   deploy: # Может быть любое название
     runs-on: ubuntu-latest # Запускайся на операционной системе ubuntu
