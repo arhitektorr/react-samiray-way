@@ -1,0 +1,22 @@
+name: MusicFun Deploy
+
+on: # Проверяет на какое событие
+  push: # push событие
+    branches: [main] #Каккя ветка
+
+jobs: # Шаги выполнения
+  deploy: # Может быть любое название
+    runs-on: ubuntu-latest # Запускайся на операционной системе ubuntu
+
+    steps: # Шаги
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          patch: dist # Путь к папке dist
+
+      - uses: actions/deploy-pages@v4
