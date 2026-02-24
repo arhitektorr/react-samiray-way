@@ -17,6 +17,6 @@ jobs: # Шаги выполнения
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          patch: dist # Путь к папке dist
+          path: dist # Путь к папке dist
 
       - uses: actions/deploy-pages@v4
